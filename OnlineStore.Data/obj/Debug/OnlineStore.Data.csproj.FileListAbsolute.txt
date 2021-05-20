@@ -1,0 +1,6 @@
+C:\SourceTest\OnlineStore\OnlineStore.Data\bin\Debug\OnlineStore.Data.dll
+C:\SourceTest\OnlineStore\OnlineStore.Data\bin\Debug\OnlineStore.Data.pdb
+C:\SourceTest\OnlineStore\OnlineStore.Data\obj\Debug\OnlineStore.Data.csproj.CoreCompileInputs.cache
+C:\SourceTest\OnlineStore\OnlineStore.Data\obj\Debug\OnlineStore.Data.dll
+C:\SourceTest\OnlineStore\OnlineStore.Data\obj\Debug\OnlineStore.Data.pdb
+C:\SourceTest\OnlineStore\OnlineStore.Data\obj\Debug\OnlineStore.Data.csprojAssemblyReference.cache

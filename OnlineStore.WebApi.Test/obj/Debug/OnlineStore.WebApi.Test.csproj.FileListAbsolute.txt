@@ -1,0 +1,17 @@
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\bin\Debug\OnlineStore.WebApi.Test.dll
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\bin\Debug\OnlineStore.WebApi.Test.pdb
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\obj\Debug\OnlineStore.WebApi.Test.csprojAssemblyReference.cache
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\obj\Debug\OnlineStore.WebApi.Test.csproj.CoreCompileInputs.cache
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\obj\Debug\OnlineStore.WebApi.Test.csproj.CopyComplete
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\obj\Debug\OnlineStore.WebApi.Test.dll
+C:\SourceTest\OnlineStore\OnlineStore.WebApi.Test\obj\Debug\OnlineStore.WebApi.Test.pdb
