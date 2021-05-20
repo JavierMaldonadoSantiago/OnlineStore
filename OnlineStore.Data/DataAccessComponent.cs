@@ -9,7 +9,7 @@ namespace OnlineStore.Data
 {
     public class DataAccessComponent
     {
-        protected const string CONNECTION_NAME = "DigitalizacionEntities";
+        protected const string CONNECTION_NAME = "StoreEntities";
 
 
         protected StringBuilder log = new StringBuilder();

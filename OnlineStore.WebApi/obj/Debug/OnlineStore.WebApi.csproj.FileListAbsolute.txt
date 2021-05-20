@@ -94,3 +94,10 @@ C:\SourceTest\OnlineStore\OnlineStore.WebApi\bin\OnlineStore.Business.dll
 C:\SourceTest\OnlineStore\OnlineStore.WebApi\bin\OnlineStore.Entities.dll
 C:\SourceTest\OnlineStore\OnlineStore.WebApi\bin\OnlineStore.Business.pdb
 C:\SourceTest\OnlineStore\OnlineStore.WebApi\bin\OnlineStore.Entities.pdb
+C:\SourceTest\OnlineStore\OnlineStore.WebApi\bin\OnlineStore.Data.dll
+C:\SourceTest\OnlineStore\OnlineStore.WebApi\bin\EntityFramework.dll
+C:\SourceTest\OnlineStore\OnlineStore.WebApi\bin\OnlineStore.Data.pdb
+C:\SourceTest\OnlineStore\OnlineStore.WebApi\bin\OnlineStore.Data.dll.config
+C:\SourceTest\OnlineStore\OnlineStore.WebApi\bin\EntityFramework.xml
+C:\SourceTest\OnlineStore\OnlineStore.WebApi\bin\EntityFramework.SqlServer.dll
+C:\SourceTest\OnlineStore\OnlineStore.WebApi\bin\EntityFramework.SqlServer.xml
