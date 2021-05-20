@@ -4,3 +4,9 @@ C:\SourceTest\OnlineStore\OnlineStore.Data\obj\Debug\OnlineStore.Data.csproj.Cor
 C:\SourceTest\OnlineStore\OnlineStore.Data\obj\Debug\OnlineStore.Data.dll
 C:\SourceTest\OnlineStore\OnlineStore.Data\obj\Debug\OnlineStore.Data.pdb
 C:\SourceTest\OnlineStore\OnlineStore.Data\obj\Debug\OnlineStore.Data.csprojAssemblyReference.cache
+C:\SourceTest\OnlineStore\OnlineStore.Data\bin\Debug\OnlineStore.Data.dll.config
+C:\SourceTest\OnlineStore\OnlineStore.Data\bin\Debug\EntityFramework.dll
+C:\SourceTest\OnlineStore\OnlineStore.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\SourceTest\OnlineStore\OnlineStore.Data\bin\Debug\EntityFramework.xml
+C:\SourceTest\OnlineStore\OnlineStore.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\SourceTest\OnlineStore\OnlineStore.Data\obj\Debug\OnlineStore.Data.csproj.CopyComplete
