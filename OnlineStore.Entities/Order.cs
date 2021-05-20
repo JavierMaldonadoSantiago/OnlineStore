@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace OnlineStore.Entities
 {
-    public class Class1
+    public class Order
     {
+        public int OrderId { get; set; }
+        public int CustomerId { get; set; }
+        public OrderStatus Status { get; set; }
     }
 }

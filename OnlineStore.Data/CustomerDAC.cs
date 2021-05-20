@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace OnlineStore.Data
 {
-    class CustomerDAC
+    public class CustomerDAC
     {
+
     }
 }
