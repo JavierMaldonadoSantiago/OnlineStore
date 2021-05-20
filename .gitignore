@@ -1,1 +1,9 @@
 .vs
+OnlineStore.Business/bin/
+OnlineStore.Business/obj/
+OnlineStore.Entities/bin/
+OnlineStore.Entities/obj/
+OnlineStore.Data/bin/
+OnlineStore.Data/obj/
+OnlineStore.WebApi/bin/
+OnlineStore.WebApi/obj/

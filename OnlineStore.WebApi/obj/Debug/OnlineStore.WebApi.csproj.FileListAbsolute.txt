@@ -90,3 +90,7 @@ C:\SourceTest\OnlineStore\OnlineStore.WebApi\obj\Debug\OnlineStore.WebApi.csproj
 C:\SourceTest\OnlineStore\OnlineStore.WebApi\obj\Debug\OnlineStore.WebApi.csproj.CopyComplete
 C:\SourceTest\OnlineStore\OnlineStore.WebApi\obj\Debug\OnlineStore.WebApi.dll
 C:\SourceTest\OnlineStore\OnlineStore.WebApi\obj\Debug\OnlineStore.WebApi.pdb
+C:\SourceTest\OnlineStore\OnlineStore.WebApi\bin\OnlineStore.Business.dll
+C:\SourceTest\OnlineStore\OnlineStore.WebApi\bin\OnlineStore.Entities.dll
+C:\SourceTest\OnlineStore\OnlineStore.WebApi\bin\OnlineStore.Business.pdb
+C:\SourceTest\OnlineStore\OnlineStore.WebApi\bin\OnlineStore.Entities.pdb

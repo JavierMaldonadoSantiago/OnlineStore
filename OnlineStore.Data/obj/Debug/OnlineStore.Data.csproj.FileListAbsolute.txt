@@ -10,3 +10,5 @@ C:\SourceTest\OnlineStore\OnlineStore.Data\bin\Debug\EntityFramework.SqlServer.d
 C:\SourceTest\OnlineStore\OnlineStore.Data\bin\Debug\EntityFramework.xml
 C:\SourceTest\OnlineStore\OnlineStore.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\SourceTest\OnlineStore\OnlineStore.Data\obj\Debug\OnlineStore.Data.csproj.CopyComplete
+C:\SourceTest\OnlineStore\OnlineStore.Data\bin\Debug\OnlineStore.Entities.dll
+C:\SourceTest\OnlineStore\OnlineStore.Data\bin\Debug\OnlineStore.Entities.pdb
