@@ -188,6 +188,10 @@
       <Project>{8c1a4e02-a45d-400f-8c3a-66212c16b9c7}</Project>
       <Name>OnlineStore.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OnlineStore.Security\OnlineStore.Security.csproj">
+      <Project>{1eac3396-19dd-4d1c-832f-f3e4269c3598}</Project>
+      <Name>OnlineStore.Security</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

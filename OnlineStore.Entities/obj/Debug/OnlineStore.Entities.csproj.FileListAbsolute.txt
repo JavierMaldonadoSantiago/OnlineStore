@@ -3,3 +3,4 @@ C:\SourceTest\OnlineStore\OnlineStore.Entities\bin\Debug\OnlineStore.Entities.pd
 C:\SourceTest\OnlineStore\OnlineStore.Entities\obj\Debug\OnlineStore.Entities.csproj.CoreCompileInputs.cache
 C:\SourceTest\OnlineStore\OnlineStore.Entities\obj\Debug\OnlineStore.Entities.dll
 C:\SourceTest\OnlineStore\OnlineStore.Entities\obj\Debug\OnlineStore.Entities.pdb
+C:\SourceTest\OnlineStore\OnlineStore.Entities\obj\Debug\OnlineStore.Entities.csprojAssemblyReference.cache

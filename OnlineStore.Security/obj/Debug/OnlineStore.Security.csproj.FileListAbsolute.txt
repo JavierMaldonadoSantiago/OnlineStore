@@ -1,0 +1,16 @@
+C:\SourceTest\OnlineStore\OnlineStore.Security\obj\Debug\OnlineStore.Security.csprojAssemblyReference.cache
+C:\SourceTest\OnlineStore\OnlineStore.Security\obj\Debug\OnlineStore.Security.csproj.CoreCompileInputs.cache
+C:\SourceTest\OnlineStore\OnlineStore.Security\bin\Debug\OnlineStore.Security.dll
+C:\SourceTest\OnlineStore\OnlineStore.Security\bin\Debug\OnlineStore.Security.pdb
+C:\SourceTest\OnlineStore\OnlineStore.Security\bin\Debug\OnlineStore.Entities.dll
+C:\SourceTest\OnlineStore\OnlineStore.Security\bin\Debug\System.Web.Mvc.dll
+C:\SourceTest\OnlineStore\OnlineStore.Security\bin\Debug\OnlineStore.Entities.pdb
+C:\SourceTest\OnlineStore\OnlineStore.Security\obj\Debug\OnlineStore.Security.csproj.CopyComplete
+C:\SourceTest\OnlineStore\OnlineStore.Security\obj\Debug\OnlineStore.Security.dll
+C:\SourceTest\OnlineStore\OnlineStore.Security\obj\Debug\OnlineStore.Security.pdb
+C:\SourceTest\OnlineStore\OnlineStore.Security\bin\Debug\OnlineStore.Security.dll.config
+C:\SourceTest\OnlineStore\OnlineStore.Security\bin\Debug\Newtonsoft.Json.dll
+C:\SourceTest\OnlineStore\OnlineStore.Security\bin\Debug\System.Net.Http.Formatting.dll
+C:\SourceTest\OnlineStore\OnlineStore.Security\bin\Debug\Newtonsoft.Json.xml
+C:\SourceTest\OnlineStore\OnlineStore.Security\bin\Debug\System.Net.Http.Formatting.xml
+C:\SourceTest\OnlineStore\OnlineStore.Security\bin\Debug\es\System.Net.Http.Formatting.resources.dll

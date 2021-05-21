@@ -86,3 +86,6 @@ C:\SourceTest\OnlineStore\OnlineStore.UI.Web\obj\Debug\OnlineStore.UI.Web.csproj
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\obj\Debug\OnlineStore.UI.Web.csproj.CopyComplete
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\obj\Debug\OnlineStore.UI.Web.dll
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\obj\Debug\OnlineStore.UI.Web.pdb
+C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\OnlineStore.Security.dll
+C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\OnlineStore.Security.pdb
+C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\OnlineStore.Security.dll.config
