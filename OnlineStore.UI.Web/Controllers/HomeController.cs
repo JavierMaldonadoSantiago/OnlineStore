@@ -8,6 +8,8 @@ using Newtonsoft.Json;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using OnlineStore.Entities;
+using OnlineStore.Security;
+
 
 namespace OnlineStore.UI.Web.Controllers
 {
@@ -22,6 +24,7 @@ namespace OnlineStore.UI.Web.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
+
 
             return View();
         }

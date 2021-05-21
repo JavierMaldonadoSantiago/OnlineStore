@@ -12,11 +12,38 @@ namespace OnlineStore.Business
     {
         public static Result NewOrder(Order order)
         {
-            return SalesDAC.NewOrder(order);
+            int customerId = CustomerDAC.IsCustomerRegistered(new Customer() { CustomerEmail = order.UserEmail });
+            if (customerId != 0)
+            {
+                order.CustomerId = customerId;
+                return SalesDAC.NewOrder(order);
+            }
+            else
+            {
+                return new Result()
+                {
+                    Status = ResultStatus.Error,
+                    Message = "El usuario no esta registrado"
+                };
+            }
+            
         }
-        public static Result GetOrders(int customerId)
+        public static Result GetOrders(Customer customer)
         {
-            return SalesDAC.GetOrders(customerId);
+            int customerId = CustomerDAC.IsCustomerRegistered(new Customer() { CustomerEmail = customer.CustomerEmail });
+            if (customerId != 0)
+            {
+                return SalesDAC.GetOrders(customerId);
+            }
+            else
+            {
+                return new Result()
+                {
+                    Status = ResultStatus.Error,
+                    Message = "El usuario no esta registrado"
+                };
+            }
+            
         }
     }
 }

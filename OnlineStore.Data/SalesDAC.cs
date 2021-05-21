@@ -26,16 +26,17 @@ namespace OnlineStore.Data
                     db.Configuration.ProxyCreationEnabled = false;
 
                     var pCustomerId = new SqlParameter("@CustomerId", order.CustomerId);
-                    var pStatus = new SqlParameter("@Status", order.Status.ToString());
+                    var pStatus = new SqlParameter("@Status", OrderStatus.CREATED.ToString());
                     var pProductId = new SqlParameter("@ProductId", order.Detail.ProductId);
                     var pPieces = new SqlParameter("@Pieces", order.Detail.Pieces);
 
                     object[] parameters = new object[] { pCustomerId, pStatus, pProductId, pPieces };
 
-                    var OrderId = db.Database
+                    var orderId = db.Database
                           .SqlQuery<int>("Usp_Sales_AddOrder @CustomerId, @Status, @ProductId, @Pieces", parameters).SingleOrDefault();
                     result.Status = ResultStatus.Ok;
                     result.Message = "Se agrego la orden de forma correcta";
+                    result.ObjectResult = orderId;
                 }
             }
             catch (Exception ex)

@@ -12,7 +12,25 @@ namespace OnlineStore.Business
     {
         public static Result RegisterCustomer(Customer customer)
         {
-            return CustomerDAC.RegisterCustomer(customer);
+            if (CustomerDAC.IsCustomerRegistered(customer) == 0)
+            {
+                return CustomerDAC.RegisterCustomer(customer);
+            }
+            else
+            {
+                return new Result()
+                {
+                    Message = "El usuario ya exite, use login para ingresar",
+                    Status = ResultStatus.Error
+
+                };
+            }
+
+        }
+
+        public static Result GetCustomerByEmail(string email)
+        {
+            return CustomerDAC.GetCustomerByEmail(email);
         }
     }
 }

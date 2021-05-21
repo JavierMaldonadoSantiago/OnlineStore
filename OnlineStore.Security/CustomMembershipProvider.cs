@@ -19,8 +19,47 @@ namespace OnlineStore.Security
         string baseUrl = ConfigurationManager.AppSettings.Get("virtualPath").ToString();
         HttpRequest request { get; set; }
         private int cacheTimeoutInMinutes = 30;
+        public Result RegisterCustomer(UserSession user)
+        {
+            Result result = new Result();
+            using (var client = new HttpClient())
+            {
+                Customer customer = new Customer()
+                {
+                    CustomerName = user.Name,
+                    CustomerEmail = user.Email,
+                    CustomerMobil = user.Mobile
+                };
+                client.BaseAddress = new Uri(baseUrl);
+                client.DefaultRequestHeaders.Clear();
+
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                HttpResponseMessage res = client.PostAsJsonAsync("api/Customer/RegisterCustomer/", customer).Result;
+                if (res.IsSuccessStatusCode)
+                {
+                    var response = res.Content.ReadAsStringAsync().Result;
+                    result = JsonConvert.DeserializeObject<Result>(response);
+                    if (result.Status == ResultStatus.Ok)
+                    {
+                       
+                        Customer customerR = JsonConvert.DeserializeObject<Customer>(result.ObjectResult.ToString());
+                        if (customerR != null)
+                        {
+                            if (ValidateUser(customerR.CustomerEmail, ""))
+                            {
+                                FormsAuthentication.SetAuthCookie(customerR.CustomerEmail, false);
+                                result.Status = ResultStatus.Ok;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            return result;
+        }
         public override bool ValidateUser(string username, string password)
         {
+           
             var result = false;
             UserSession userF = new UserSession()
             {
@@ -33,12 +72,12 @@ namespace OnlineStore.Security
                 client.BaseAddress = new Uri(baseUrl);
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage res = client.PostAsJsonAsync("api/Secutity/GetUserByUserName/", userF).Result;
+                HttpResponseMessage res = client.PostAsJsonAsync("api/Security/GetUserByUserName/", userF).Result;
                 if (res.IsSuccessStatusCode)
                 {
                     var response = res.Content.ReadAsStringAsync().Result;
                     resultApi = JsonConvert.DeserializeObject<Result>(response);
-                    if (resultApi.Status == ResultStatus.Error)
+                    if (resultApi.Status == ResultStatus.Ok)
                     {
                         userF = JsonConvert.DeserializeObject<UserSession>(resultApi.ObjectResult.ToString());
                     }
@@ -52,7 +91,7 @@ namespace OnlineStore.Security
             if (string.IsNullOrEmpty(password) && userF != null)
             {
 
-                if (resultApi.Status ==  ResultStatus.Error)
+                if (resultApi.Status == ResultStatus.Error)
                 {
                     throw new Exception(resultApi.Message);
                 }
@@ -82,7 +121,7 @@ namespace OnlineStore.Security
                     client.BaseAddress = new Uri(baseUrl);
                     client.DefaultRequestHeaders.Clear();
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                    HttpResponseMessage res = client.PostAsJsonAsync("api/Secutity/GetUserLogin/", userLog).Result;
+                    HttpResponseMessage res = client.PostAsJsonAsync("api/Security/GetUserByUserName/", userLog).Result;
                     if (res.IsSuccessStatusCode)
                     {
                         var response = res.Content.ReadAsStringAsync().Result;

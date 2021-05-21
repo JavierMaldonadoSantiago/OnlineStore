@@ -11,6 +11,13 @@ namespace OnlineStore.Entities
     [DataContract]
     public class UserSession
     {
+        public UserSession()
+        {
+            this.CustomerId = 0;
+            this.Email = string.Empty;
+            this.Name = string.Empty;
+            this.Mobile = string.Empty;
+        }
         [DataMember]
         public int CustomerId { get; set; }
 

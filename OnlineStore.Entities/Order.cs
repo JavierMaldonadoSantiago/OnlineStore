@@ -12,5 +12,6 @@ namespace OnlineStore.Entities
         public int CustomerId { get; set; }
         public OrderStatus Status { get; set; }
         public OrderDetail Detail { get; set; }
+        public string UserEmail { get; set; }
     }
 }

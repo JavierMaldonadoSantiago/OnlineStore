@@ -52,6 +52,7 @@ C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\Microsoft.CodeDom.Providers.Dot
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\Microsoft.Web.Infrastructure.dll
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\Newtonsoft.Json.dll
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\OnlineStore.Entities.dll
+C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\OnlineStore.Security.dll
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\System.Net.Http.Formatting.dll
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\System.Web.Helpers.dll
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\System.Web.Mvc.dll
@@ -62,6 +63,9 @@ C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\System.Web.WebPages.dll
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\System.Web.WebPages.Razor.dll
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\WebGrease.dll
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\OnlineStore.Entities.pdb
+C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\OnlineStore.Security.pdb
+C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\OnlineStore.Security.dll.config
+C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\Newtonsoft.Json.xml
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\System.Net.Http.Formatting.xml
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\System.Web.Helpers.xml
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\System.Web.Mvc.xml
@@ -70,7 +74,6 @@ C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\System.Web.Razor.xml
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\System.Web.WebPages.xml
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\System.Web.WebPages.Deployment.xml
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\System.Web.WebPages.Razor.xml
-C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\Newtonsoft.Json.xml
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\Antlr3.Runtime.pdb
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\es\System.Net.Http.Formatting.resources.dll
@@ -86,6 +89,3 @@ C:\SourceTest\OnlineStore\OnlineStore.UI.Web\obj\Debug\OnlineStore.UI.Web.csproj
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\obj\Debug\OnlineStore.UI.Web.csproj.CopyComplete
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\obj\Debug\OnlineStore.UI.Web.dll
 C:\SourceTest\OnlineStore\OnlineStore.UI.Web\obj\Debug\OnlineStore.UI.Web.pdb
-C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\OnlineStore.Security.dll
-C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\OnlineStore.Security.pdb
-C:\SourceTest\OnlineStore\OnlineStore.UI.Web\bin\OnlineStore.Security.dll.config

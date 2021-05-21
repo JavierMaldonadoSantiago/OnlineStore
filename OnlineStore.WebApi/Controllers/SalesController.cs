@@ -21,7 +21,7 @@ namespace OnlineStore.WebApi.Controllers
         [Route("GetOrders")]
         public Result GetOrders(Customer customer)
         {
-            return SalesBC.GetOrders(customer.CustomerId);
+            return SalesBC.GetOrders(customer);
         }
 
     }
