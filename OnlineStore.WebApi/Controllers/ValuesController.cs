@@ -14,6 +14,7 @@ namespace OnlineStore.WebApi.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
+            SalesBC.GetOrders(1);
             CustomerBC.RegisterCustomer(new Customer()
             {
                 CustomerName = "Customer1",

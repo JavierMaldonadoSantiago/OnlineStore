@@ -10,6 +10,6 @@ namespace OnlineStore.Entities
     {
         public ResultStatus Status { get; set; }
         public object ObjectResult { get; set; }
-        public string DetailError { get; set; }
+        public string Message { get; set; }
     }
 }

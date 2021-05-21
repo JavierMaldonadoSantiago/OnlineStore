@@ -29,13 +29,14 @@ namespace OnlineStore.Data
 
                     var customerId = db.Database
                           .SqlQuery<int>("Usp_Cust_AddCustomer @CustomerName, @CustomerEmail, @CustomerMobile", parameters).SingleOrDefault();
-
+                    result.Status = ResultStatus.Ok;
+                    result.Message = "Se registro el cliente correctamente";
                 }
             }
             catch (Exception ex)
             {
                 result.Status = ResultStatus.Error;
-                result.DetailError = ex.Message;
+                result.Message = ex.Message;
             }
             return result;
         }

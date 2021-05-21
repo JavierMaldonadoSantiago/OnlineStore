@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace OnlineStore.Entities
 {
-    public class Order
+    public class OrderItem
     {
         public int OrderId { get; set; }
         public int CustomerId { get; set; }
-        public OrderStatus Status { get; set; }
-        public OrderDetail Detail { get; set; }
+        public string Product { get; set; }
+        public int Pieces { get; set; }
+        public decimal Amount { get; set; }
+
+        public string Status { get; set; }
     }
 }

@@ -1,14 +1,17 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OnlineStore.Entities;
+using OnlineStore.Business;
 
 namespace OnlineStore.WebApi.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class UtCustomer
     {
         [TestMethod]
-        public void TestMethod1()
+        public void RegisterCustomer()
         {
+           
         }
     }
 }
