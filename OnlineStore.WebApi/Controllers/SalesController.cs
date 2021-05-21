@@ -17,12 +17,11 @@ namespace OnlineStore.WebApi.Controllers
         {
             return SalesBC.NewOrder(order);
         }
-
         [HttpPost]
         [Route("GetOrders")]
-        public Result GetOrders(Order order)
+        public Result GetOrders(Customer customer)
         {
-            return SalesBC.NewOrder(order);
+            return SalesBC.GetOrders(customer.CustomerId);
         }
 
     }

@@ -25,9 +25,11 @@ namespace OnlineStore.WebApi.Controllers
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public Result Get(int id)
         {
-            return "value";
+            Result result = new Result();
+            result.Status = ResultStatus.Ok;
+            return result;
         }
 
         // POST api/values
