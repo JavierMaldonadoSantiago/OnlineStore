@@ -1,0 +1,52 @@
+﻿@model OnlineStore.UI.Web.Models.NewOrderModel
+@{
+    ViewBag.Title = "Ordenar";
+}
+
+<h2>Ordenar</h2>
+
+
+<div class="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="module module-login span4 offset4">
+                @using (Html.BeginForm(null, null, new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { id = "orderForm" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                <div class="form-vertical">
+                    <div class="module-head">
+                        <h3>Orden de compra</h3>
+                    </div>
+
+                    <div class="control-group">
+                        <div class="controls row-fluid">
+                            <h3>Celular</h3>
+
+                        </div>
+                    </div>
+                    <div class="module-body">
+                        <div class="control-group">
+                            <div class="controls row-fluid">
+                                @Html.LabelFor(model => model.Pieces, htmlAttributes: new { @class = "control-label col-md-2" })
+                                @Html.EditorFor(model => model.Pieces, new { htmlAttributes = new { @class = "span12" } })
+                                @Html.ValidationMessageFor(model => model.Pieces, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="module-foot">
+                        <div class="control-group">
+                            <div class="controls clearfix">
+                                <button type="submit" class="btn btn-primary pull-right">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

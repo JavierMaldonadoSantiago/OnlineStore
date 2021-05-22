@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.WebApi.Test", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.WebApi", "OnlineStore.WebApi\OnlineStore.WebApi.csproj", "{920A7D54-FEEB-4371-936A-056EC2DDE4B2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{E858442B-E60B-43E6-ACAA-47F3277F2453}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Security", "OnlineStore.Security\OnlineStore.Security.csproj", "{1EAC3396-19DD-4D1C-832F-F3E4269C3598}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,10 @@ Global
 		{920A7D54-FEEB-4371-936A-056EC2DDE4B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{920A7D54-FEEB-4371-936A-056EC2DDE4B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{920A7D54-FEEB-4371-936A-056EC2DDE4B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EAC3396-19DD-4D1C-832F-F3E4269C3598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EAC3396-19DD-4D1C-832F-F3E4269C3598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EAC3396-19DD-4D1C-832F-F3E4269C3598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EAC3396-19DD-4D1C-832F-F3E4269C3598}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +74,7 @@ Global
 		{7B04C226-531F-4F30-9752-B34558A3CB93} = {B456FB6F-C172-491C-B0D3-5E56D1293D4F}
 		{3D668502-4831-448A-90BA-E4A14CF7FC51} = {6907CC9C-7FE1-4027-A16B-9E2225F8D442}
 		{920A7D54-FEEB-4371-936A-056EC2DDE4B2} = {6907CC9C-7FE1-4027-A16B-9E2225F8D442}
+		{1EAC3396-19DD-4D1C-832F-F3E4269C3598} = {E858442B-E60B-43E6-ACAA-47F3277F2453}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {266DA42F-E313-4119-9705-5D0618E95E1E}

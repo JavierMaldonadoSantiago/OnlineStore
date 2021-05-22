@@ -1,4 +1,13 @@
 .vs
- OnlineStore.UI.Web/bin
- OnlineStore.WebApi.Test/bin
- OnlineStore.WebApi/bin
+OnlineStore.Business/bin
+OnlineStore.Business/obj
+OnlineStore.Entities/bin
+OnlineStore.Entities/obj
+OnlineStore.Data/bin
+OnlineStore.Data/obj
+OnlineStore.WebApi/bin
+OnlineStore.WebApi/obj
+OnlineStore.WebApi.Test/bin
+OnlineStore.UI.Web/bin
+OnlineStore.Security/bin
+OnlineStore.Security/obj

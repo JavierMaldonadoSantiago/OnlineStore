@@ -4,6 +4,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using OnlineStore.Business;
+using OnlineStore.Entities;
 
 namespace OnlineStore.WebApi.Controllers
 {
@@ -12,13 +14,22 @@ namespace OnlineStore.WebApi.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
+            //SalesBC.GetOrders(1);
+          Result result =  CustomerBC.RegisterCustomer(new Customer()
+            {
+                CustomerName = "Customer1",
+                CustomerEmail = "customer1@hotmail.com",
+                CustomerMobil = "5513133113"
+            });
             return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public Result Get(int id)
         {
-            return "value";
+            Result result = new Result();
+            result.Status = ResultStatus.Ok;
+            return result;
         }
 
         // POST api/values

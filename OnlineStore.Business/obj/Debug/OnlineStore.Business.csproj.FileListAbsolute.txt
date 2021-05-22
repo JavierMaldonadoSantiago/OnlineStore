@@ -1,6 +1,14 @@
 C:\SourceTest\OnlineStore\OnlineStore.Business\bin\Debug\OnlineStore.Business.dll
 C:\SourceTest\OnlineStore\OnlineStore.Business\bin\Debug\OnlineStore.Business.pdb
+C:\SourceTest\OnlineStore\OnlineStore.Business\bin\Debug\OnlineStore.Data.dll
+C:\SourceTest\OnlineStore\OnlineStore.Business\bin\Debug\OnlineStore.Entities.dll
+C:\SourceTest\OnlineStore\OnlineStore.Business\bin\Debug\EntityFramework.dll
+C:\SourceTest\OnlineStore\OnlineStore.Business\bin\Debug\OnlineStore.Data.pdb
+C:\SourceTest\OnlineStore\OnlineStore.Business\bin\Debug\OnlineStore.Data.dll.config
+C:\SourceTest\OnlineStore\OnlineStore.Business\bin\Debug\OnlineStore.Entities.pdb
+C:\SourceTest\OnlineStore\OnlineStore.Business\bin\Debug\EntityFramework.xml
 C:\SourceTest\OnlineStore\OnlineStore.Business\obj\Debug\OnlineStore.Business.csprojAssemblyReference.cache
 C:\SourceTest\OnlineStore\OnlineStore.Business\obj\Debug\OnlineStore.Business.csproj.CoreCompileInputs.cache
+C:\SourceTest\OnlineStore\OnlineStore.Business\obj\Debug\OnlineStore.Business.csproj.CopyComplete
 C:\SourceTest\OnlineStore\OnlineStore.Business\obj\Debug\OnlineStore.Business.dll
 C:\SourceTest\OnlineStore\OnlineStore.Business\obj\Debug\OnlineStore.Business.pdb
