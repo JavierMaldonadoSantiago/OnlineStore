@@ -1,1 +1,4 @@
 .vs
+ OnlineStore.UI.Web/bin
+ OnlineStore.WebApi.Test/bin
+ OnlineStore.WebApi/bin
