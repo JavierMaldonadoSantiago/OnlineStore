@@ -11,3 +11,10 @@ OnlineStore.WebApi.Test/bin/
 OnlineStore.UI.Web/bin/
 OnlineStore.Security/bin/
 OnlineStore.Security/obj/
+OnlineStore.UI.Web/bin
+OnlineStore.WebApi.Test/obj/Debug/OnlineStore.WebApi.Test.dll
+OnlineStore.UI.Web/bin/OnlineStore.UI.Web.dll
+*.dll
+*.obj
+
+OnlineStore/OnlineStore.Business/bin

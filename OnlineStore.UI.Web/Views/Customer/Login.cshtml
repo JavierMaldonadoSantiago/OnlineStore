@@ -2,47 +2,36 @@
 @{
     ViewBag.Title = "Login";
 }
-<div class="wrapper">
+<div class="login">
     <div class="container">
-        <div class="row">
-            <div class="module module-login span4 offset4">
+        <div class="login-main">
+            <h1>Login</h1>
+            <div class="col-md-6 login-left">
+                <h2>Si ya te registraste, usa tu Email para ingresar</h2>
                 @using (Html.BeginForm(null, null, new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { id = "loginForm" }))
                 {
                     @Html.AntiForgeryToken()
+                    @*<input type="text" placeholder="Username" required="">*@
+                    @*@Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                    @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "span12" } })
+                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
 
-                    <div class="form-vertical">
-                        <div class="module-head">
-                            <h3>Ingresa al sistema</h3>
-                        </div>
-                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-                        <div class="module-body">
-                            <div class="control-group">
-                                <div class="controls row-fluid">
-                                    @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
-                                    @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "span12" } })
-                                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="controls row-fluid">
-                                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
-                                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "span12", @type = "password" } })
-                                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="module-foot">
-                            <div class="control-group">
-                                <div class="controls clearfix">
-                                    <button type="submit" class="btn btn-primary pull-right">Ingresar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @*@Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "span12", @type = "password" } })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    @*<input type="password" placeholder="Password" required="">*@
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <input type="submit" value="Login">
                 }
             </div>
+            <div class="col-md-6 login-right">
+                <h3>¿Eeres un usuario nuevo? Crea una cuenta</h3>
+                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system. and expound the actual teachings of the great.</p>
+                @*<a href="signup.html" class="login-btn">Create an Account </a>*@
+                @Html.ActionLink("Registrarse", "Register", "Customer")
+            </div>
+            <div class="clearfix"> </div>
         </div>
     </div>
 </div>
+

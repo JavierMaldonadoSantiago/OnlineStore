@@ -14,14 +14,16 @@ namespace OnlineStore.WebApi.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
+
+          Result result =   CustomerBC.GetCustomerByEmail("customer1@hotmail.com");
             //SalesBC.GetOrders(1);
-          Result result =  CustomerBC.RegisterCustomer(new Customer()
-            {
-                CustomerName = "Customer1",
-                CustomerEmail = "customer1@hotmail.com",
-                CustomerMobil = "5513133113"
-            });
-            return new string[] { "value1", "value2" };
+        //  Result result =  CustomerBC.RegisterCustomer(new Customer()
+        //    {
+        //        CustomerName = "Customer1",
+        //        CustomerEmail = "customer1@hotmail.com",
+        //        CustomerMobil = "5513133113"
+        //    });
+           return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5

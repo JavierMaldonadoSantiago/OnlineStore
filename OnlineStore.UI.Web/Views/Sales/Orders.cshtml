@@ -3,60 +3,37 @@
     ViewBag.Title = "Orders";
 }
 
+<div class="ckeckout">
+    <div class="container">
+        <div class="ckeckout-top">
+            <div class=" cart-items heading">
+                <h1>Ordenes registradas</h1>
+                <div class="in-check">
+                    <ul class="unit">
+                        <li><span>Item</span></li>
+                        <li><span>Product Name</span></li>
+                        <li><span>Unit Price</span></li>
+                        <li><span>Delivery Details</span></li>
+                        <li> </li>
+                        <div class="clearfix"> </div>
+                    </ul>
 
-<div class="module">
-    <div class="module-head">
-        <div class="module-option clearfix">
-            <div class="pull-left"><h3>Ordenes registradas</h3></div>
-
-           
+                    @foreach (var item in Model.Orders)
+                    {
+                        <ul class="cart-header simpleCart_shelfItem">
+                            <div class="close1"> </div>
+                            <li class="ring-in">
+                                <a href="single.html"><img src="~/images/c.jpg" class="img-responsive" alt=""></a>
+                            </li>
+                            <li><span>@item.Product</span></li>
+                            <li><span class="item_price">@item.Amount</span></li>
+                            <li><span>@item.Status</span></li>
+                            <li> <a href="#" class="add-cart cart-check item_add">Add to cart</a></li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                    }
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="module-body table">
-        <table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Producto</th>
-                    <th>Piezas</th>
-                    <th>Monto</th>
-                    <th>Status</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model.Orders)
-                {
-                    <tr class="gradeC">
-                        <td>@item.OrderId</td>
-                        <td>@item.Product</td>
-                        <td>@item.Pieces</td>
-                        <td>@item.Amount</td>
-                        <td>
-                            @item.Status
-                        </td>
-                        @*<td>*@
-                            @*<button class="cell-showUserDetail" data-userid=@item.UserId data-operation="1">Editar</button>*@
-                            @*<div class="gridIcon">
-                                    <img src="~/images/Edit.png" class="cell-showUserDetail cursor-pointer" data-userid=@item.UserId data-operation="1" />
-                                </div>*@
-                        @*</td>*@
-                        <td>
-                            @if (item.Status == "Pendiente")
-                            {
-                            <div>
-                                <button class="cell-showUserDetail" data-userid=@item.OrderId data-customerid=@item.CustomerId data-operation="2">Pagar</button>
-                                <button class="btn btn-primary" id="btnNewUser">Nuevo Usuario</button>
-                            </div>
-                            }
-
-                            @*<div class="gridIcon">
-                                        <img src="~/images/Delete.png" class="cell-showUserDetail cursor-pointer" data-userid=@item.UserId data-operation="2" />
-                                </div>*@
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
     </div>
 </div>

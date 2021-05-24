@@ -74,7 +74,8 @@ namespace OnlineStore.UI.Web.Controllers
                         resultApi = JsonConvert.DeserializeObject<Result>(response);
                         if (resultApi.Status == ResultStatus.Ok)
                         {
-                            resultApi = JsonConvert.DeserializeObject<Result>(resultApi.ObjectResult.ToString());
+                            //resultApi = JsonConvert.DeserializeObject<Result>(resultApi.ObjectResult.ToString());
+                            string message = resultApi.Message;
                         }
                     }
                 }

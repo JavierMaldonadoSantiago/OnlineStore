@@ -2,61 +2,43 @@
 @{
     ViewBag.Title = "Login";
 }
-<div class="wrapper">
+<div class="signin">
     <div class="container">
-        <div class="row">
-            <div class="module module-login span4 offset4">
-                @using (Html.BeginForm(null, null, new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { id = "loginForm" }))
-                {
-                    @Html.AntiForgeryToken()
+        <div class="signin-main">
+            <h1>Crea tu cuenta</h1>
+            <h2>Información</h2>
+            @using (Html.BeginForm(null, null, new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { id = "loginForm" }))
+            {
+                @Html.AntiForgeryToken()
+                @*@Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { placeholder = "Nombre" } })
 
-                    <div class="form-vertical">
-                        <div class="module-head">
-                            <h3>Ingresa al sistema</h3>
-                        </div>
-                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-                        <div class="module-body">
-                            <div class="control-group">
-                                <div class="controls row-fluid">
-                                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
-                                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "span12" } })
-                                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="controls row-fluid">
-                                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-                                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "span12" } })
-                                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="controls row-fluid">
-                                    @Html.LabelFor(model => model.Mobile, htmlAttributes: new { @class = "control-label col-md-2" })
-                                    @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "span12" } })
-                                    @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="controls row-fluid">
-                                    @Html.LabelFor(model => model.RPassword, htmlAttributes: new { @class = "control-label col-md-2" })
-                                    @Html.EditorFor(model => model.RPassword, new { htmlAttributes = new { @class = "span12", @type = "password" } })
-                                    @Html.ValidationMessageFor(model => model.RPassword, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-                        </div>
+                @*@Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "no-margin", placeholder = "E-mail" } })
 
-                        <div class="module-foot">
-                            <div class="control-group">
-                                <div class="controls clearfix">
-                                    <button type="submit" class="btn btn-primary pull-right">Ingresar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                }
-            </div>
+
+                @*@Html.LabelFor(model => model.Mobile, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "", placeholder = "Teléfono" } })
+
+
+                @*@Html.LabelFor(model => model.RPassword, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                @Html.EditorFor(model => model.RPassword, new { htmlAttributes = new { @class = "no-margin", @type = "password", placeholder = "Clave" } })
+
+                @*<input type="text" placeholder="Username">
+            <input type="text" class="no-margin" placeholder="E-mail">
+            <input type="password" placeholder="Password" required="" />
+            <input type="password" class="no-margin" placeholder="Confirm Password" required="" />*@
+                @*<span class="checkbox1">
+                <label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>i agree terms of use and privacy</label>
+            </span>*@
+                <div>@Html.ValidationSummary(true, "", new { @class = "text-danger" })</div>
+                <div>@Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })</div>
+                <div>@Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })</div>
+                <div>@Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })</div>
+                <div>@Html.ValidationMessageFor(model => model.RPassword, "", new { @class = "text-danger" })</div>
+                <input type="submit" value="Submit">
+            }
         </div>
     </div>
 </div>
