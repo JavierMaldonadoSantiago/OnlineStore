@@ -1,51 +1,56 @@
-﻿@model OnlineStore.UI.Web.Models.NewOrderModel
+﻿@model OnlineStore.UI.Web.Models.OrderModel
 @{
     ViewBag.Title = "Ordenar";
 }
 
-<h2>Ordenar</h2>
-
-
-<div class="wrapper">
+<div class="ckeckout">
     <div class="container">
-        <div class="row">
-            <div class="module module-login span4 offset4">
-                @using (Html.BeginForm(null, null, new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { id = "orderForm" }))
-                {
-                    @Html.AntiForgeryToken()
-
-                <div class="form-vertical">
-                    <div class="module-head">
-                        <h3>Orden de compra</h3>
-                    </div>
-
-                    <div class="control-group">
-                        <div class="controls row-fluid">
-                            <h3>Celular</h3>
-
-                        </div>
-                    </div>
-                    <div class="module-body">
-                        <div class="control-group">
-                            <div class="controls row-fluid">
-                                @Html.LabelFor(model => model.Pieces, htmlAttributes: new { @class = "control-label col-md-2" })
-                                @Html.EditorFor(model => model.Pieces, new { htmlAttributes = new { @class = "span12" } })
-                                @Html.ValidationMessageFor(model => model.Pieces, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="module-foot">
-                        <div class="control-group">
-                            <div class="controls clearfix">
-                                <button type="submit" class="btn btn-primary pull-right">Comprar</button>
-                            </div>
-                        </div>
-                    </div>
+        <div class="ckeckout-top">
+            <div class=" cart-items heading">
+                <h1>Carrito </h1>
+                <div class="in-check">
+                    <h1>@Model.Message</h1>
                 </div>
+                @if (Model.ActiveOrder != null)
+                {
+                    <div class="in-check">
+                        @*<ul class="unit">
+                    <li><span>Item</span></li>
+                    <li><span>Product Name</span></li>
+                    <li><span>Unit Price</span></li>
+                    <li><span>Delivery Details</span></li>
+                    <li> </li>
+                    <div class="clearfix"> </div>
+                </ul>*@
+                        @using (Html.BeginForm(null, null, new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { id = "orderForm" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+
+                            <ul class="cart-header simpleCart_shelfItem">
+                                <div class="close1"> </div>
+                                <li class="ring-in">
+                                    <a href="single.html"><img src="~/images/ba.png" class="img-responsive" alt=""></a>
+                                </li>
+                                <li><span>Bolsa de mano</span></li>
+                                <li><span class="item_price">$10,000.00</span></li>
+                                @*<li> <a href="#" class="add-cart cart-check item_add">Pagar</a></li>*@
+                                <li>
+                                    <button type="submit" class="btn btn-primary pull-right">Pagar</button>
+                                </li>
+                                <div class="clearfix"> </div>
+                            </ul>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <div class="in-check">
+                        <h1>Tu carrito está vacio, agega un producto </h1>
+                    </div>
                 }
             </div>
+
         </div>
     </div>
 </div>

@@ -16,17 +16,80 @@ namespace OnlineStore.UI.Web.Controllers
     public class SalesController : Controller
     {
         string baseUrl = ConfigurationManager.AppSettings.Get("virtualPath").ToString();
+
+        public ActionResult Index(OrderModel model)
+        {
+
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Customer");
+            }
+            Customer customer = new Customer()
+            {
+                CustomerEmail = User.Identity.Name
+            };
+            Result resultApi = new Result();
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                HttpResponseMessage res = client.PostAsJsonAsync("api/Sales/PayOrder/", customer).Result;
+                if (res.IsSuccessStatusCode)
+                {
+                    var response = res.Content.ReadAsStringAsync().Result;
+                    resultApi = JsonConvert.DeserializeObject<Result>(response);
+                    model.Message = resultApi.Message;
+                }
+            }
+            model.ActiveOrder = GetOrder(customer);
+            return View(model);
+        }
+        private OrderItem GetOrder(Customer customer)
+        {
+            Result resultApi = new Result();
+            OrderItem order = new OrderItem();
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                HttpResponseMessage res = client.PostAsJsonAsync("api/Sales/GetOrder/", customer).Result;
+                if (res.IsSuccessStatusCode)
+                {
+                    var response = res.Content.ReadAsStringAsync().Result;
+                    resultApi = JsonConvert.DeserializeObject<Result>(response);
+                    if (resultApi.Status == ResultStatus.Ok)
+                    {
+                        order = JsonConvert.DeserializeObject<OrderItem>(resultApi.ObjectResult.ToString());
+                    }
+                }
+            }
+            return order;
+        }
         // GET: Sales
         [HttpGet]
         public ActionResult Index()
         {
-            
-            
-            return View();
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Customer");
+            }
+            Customer customer = new Customer()
+            {
+                CustomerEmail = User.Identity.Name
+            };
+            OrderModel model = new OrderModel();
+            model.ActiveOrder = GetOrder(customer);
+            return View(model);
         }
         [HttpGet]
         public ActionResult Orders()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Customer");
+            }
             OrdersModel model = new OrdersModel();
             Customer costumer = new Customer()
             {
@@ -51,38 +114,7 @@ namespace OnlineStore.UI.Web.Controllers
             }
             return View(model);
         }
-        [HttpPost]
-        public ActionResult Index(NewOrderModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                Order order = new Order()
-                {
-                    UserEmail = User.Identity.Name,
-                    Detail = new OrderDetail() { Pieces = model.Pieces, ProductId = 1 }
-                };
-                Result resultApi = new Result();
-                using (var client = new HttpClient())
-                {
-                    client.BaseAddress = new Uri(baseUrl);
-                    client.DefaultRequestHeaders.Clear();
-                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                    HttpResponseMessage res = client.PostAsJsonAsync("api/Sales/NewOrder/", order).Result;
-                    if (res.IsSuccessStatusCode)
-                    {
-                        var response = res.Content.ReadAsStringAsync().Result;
-                        resultApi = JsonConvert.DeserializeObject<Result>(response);
-                        if (resultApi.Status == ResultStatus.Ok)
-                        {
-                            //resultApi = JsonConvert.DeserializeObject<Result>(resultApi.ObjectResult.ToString());
-                            string message = resultApi.Message;
-                        }
-                    }
-                }
-            }
 
-            return View(model);
-        }
 
     }
 }

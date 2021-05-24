@@ -13,21 +13,24 @@ namespace OnlineStore.Entities
         public string Product { get; set; }
         public int Pieces { get; set; }
         public decimal Amount { get; set; }
-        private string status = string.Empty;
-        public string Status
+
+        public string Status { get; set; }
+
+        public string StatusDesc
         {
             get
             {
-                switch (status)
+                string status = string.Empty;
+                switch (Status)
                 {
                     case "CREATED":
-                        status = "Pendiente";
+                        status = "Pendiente de pago";
                         break;
                     case "PAYED":
                         status = "Pagada";
                         break;
                     case "REJECTED":
-                        status = "Rechadado";
+                        status = "Pago Rechazado";
                         break;
                     default:
                         status = string.Empty;
@@ -36,10 +39,7 @@ namespace OnlineStore.Entities
                 return status;
 
             }
-            set
-            {
-                this.status = value;
-            }
+           
         }
     }
 }

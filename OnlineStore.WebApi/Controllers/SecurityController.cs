@@ -17,6 +17,5 @@ namespace OnlineStore.WebApi.Controllers
         {
             return CustomerBC.GetCustomerByEmail(user.Email);
         }
-
     }
 }

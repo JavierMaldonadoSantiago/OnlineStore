@@ -22,14 +22,14 @@ namespace OnlineStore.Security
         public Result RegisterCustomer(UserSession user)
         {
             Result result = new Result();
+            Customer customer = new Customer()
+            {
+                CustomerName = user.Name,
+                CustomerEmail = user.Email,
+                CustomerMobil = user.Mobile
+            };
             using (var client = new HttpClient())
             {
-                Customer customer = new Customer()
-                {
-                    CustomerName = user.Name,
-                    CustomerEmail = user.Email,
-                    CustomerMobil = user.Mobile
-                };
                 client.BaseAddress = new Uri(baseUrl);
                 client.DefaultRequestHeaders.Clear();
 

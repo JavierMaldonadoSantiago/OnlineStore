@@ -77,5 +77,44 @@ namespace OnlineStore.Data
             }
             return result;
         }
+        public static Result GetOrder(int customerId)
+        {
+            Result result = new Result();
+            OrderItem order = new OrderItem();
+            try
+            {
+                using (var db = new DbContext(CONNECTION_NAME))
+                {
+                    db.Configuration.LazyLoadingEnabled = false;
+                    db.Configuration.ProxyCreationEnabled = false;
+
+                    var pCustomerId = new SqlParameter("@CustomerId", customerId);
+
+                    object[] parameters = new object[] { pCustomerId };
+
+                    order = db.Database
+                          .SqlQuery<OrderItem>("Usp_Sales_GetOrder @CustomerId", parameters).FirstOrDefault();
+                    if (order != null)
+                    {
+                        result.ObjectResult = order;
+                        result.Status = ResultStatus.Ok;
+                        result.Message = "La ordern se obtuvo correctamente";
+                    }
+                    else
+                    {
+                        result.ObjectResult = order;
+                        result.Status = ResultStatus.Error;
+                        result.Message = "No existe una orden";
+                    }
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                result.Status = ResultStatus.Error;
+                result.Message = ex.Message;
+            }
+            return result;
+        }
     }
 }

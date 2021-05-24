@@ -45,5 +45,22 @@ namespace OnlineStore.Business
             }
             
         }
+        public static Result GetOrder(Customer customer)
+        {
+            int customerId = CustomerDAC.IsCustomerRegistered(new Customer() { CustomerEmail = customer.CustomerEmail });
+            if (customerId != 0)
+            {
+                return SalesDAC.GetOrder(customerId);
+            }
+            else
+            {
+                return new Result()
+                {
+                    Status = ResultStatus.Error,
+                    Message = "El usuario no esta registrado"
+                };
+            }
+
+        }
     }
 }

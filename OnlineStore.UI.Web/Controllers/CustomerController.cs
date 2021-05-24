@@ -23,17 +23,25 @@ namespace OnlineStore.UI.Web.Controllers
         [HttpPost]
         public ActionResult Login(LoginModel model, string ReturnUrl = "")
         {
-            CustomMembershipProvider customMembershipProvider = new CustomMembershipProvider();
-            if (ModelState.IsValid)
+            try
             {
-                if (customMembershipProvider.ValidateUser(model.UserName, model.Password))
+                CustomMembershipProvider customMembershipProvider = new CustomMembershipProvider();
+                if (ModelState.IsValid)
                 {
-                    FormsAuthentication.SetAuthCookie(model.UserName, false);
-                    return RedirectToLocal(ReturnUrl);
-                }
 
+                    if (customMembershipProvider.ValidateUser(model.UserName, model.Password))
+                    {
+                        FormsAuthentication.SetAuthCookie(model.UserName, false);
+                        return RedirectToLocal(ReturnUrl);
+                    }
+
+                }
+                ModelState.AddModelError("", "Error : El usuario o la clave no son válidos. ");
             }
-            ModelState.AddModelError("", "Error : El usuario o la clave no son válidos. ");
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+            }
             return View(model);
         }
 
@@ -56,22 +64,33 @@ namespace OnlineStore.UI.Web.Controllers
         [HttpPost]
         public ActionResult Register(RegisterModel model)
         {
-            CustomMembershipProvider customMembershipProvider = new CustomMembershipProvider();
-            if (ModelState.IsValid)
+            try
             {
-                Result result = customMembershipProvider.RegisterCustomer(model.GetUserSession());
-                if (result.Status == ResultStatus.Ok)
+
+
+                CustomMembershipProvider customMembershipProvider = new CustomMembershipProvider();
+                if (ModelState.IsValid)
                 {
-                    return RedirectToAction("Index", "Home");
+                    Result result = customMembershipProvider.RegisterCustomer(model.GetUserSession());
+                    if (result.Status == ResultStatus.Ok)
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Error : " + result.Message);
+                        return View();
+                    }
+
                 }
-                else
-                {
-                    ModelState.AddModelError("", "Error : " + result.Message);
-                    return View();
-                }
-                
+
+                ModelState.AddModelError("", "Error : El usuario o la clave no son válidos. ");
             }
-            ModelState.AddModelError("", "Error : El usuario o la clave no son válidos. ");
+            catch (Exception ex)
+            {
+
+                ModelState.AddModelError("", ex.Message);
+            }
             return View();
         }
 

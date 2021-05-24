@@ -94,9 +94,17 @@ namespace OnlineStore.Data
 
                     UserSession customer = db.Database
                           .SqlQuery<UserSession>("Usp_Cust_GetCustomerByName @CustomerEmail", parameters).SingleOrDefault();
-
-                    result.Status = ResultStatus.Ok;
-                    result.ObjectResult = customer;
+                    if (customer != null)
+                    {
+                        result.Status = ResultStatus.Ok;
+                        result.ObjectResult = customer;
+                    }
+                    else
+                    {
+                        result.Status = ResultStatus.Error;
+                        result.Message = "Usuario no encontrado";
+                    }
+                    
 
                 }
             }
